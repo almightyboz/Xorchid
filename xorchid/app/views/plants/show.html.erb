@@ -1,0 +1,12 @@
+<p>Hey, this is a plant!</p>
+<h2>I am <%= @plant.name %></h2>
+<h4>I was potted on <%= @plant.birthday %></h4>
+
+<p>Watering schedule:</p>
+<ul>
+  <% @plant.waterings.each do |watering| %>
+    <li><%= watering.water_date %></li>
+  <% end %>
+</ul>
+
+<%= link_to "Home", root_path %>
