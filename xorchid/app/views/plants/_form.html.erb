@@ -1,0 +1,14 @@
+<% if @plant.errors %>
+  <ul>
+    <% @plant.errors.full_messages.each do |error| %>
+    <li><%= error %></li>
+  </ul>
+<% end %>
+
+<%= form_for (@plant) do |f| %>
+    <%=  f.text_field :name, placeholder: "Plant name" %>
+    <%= f.text_field :birthday, placeholder: "Date of potting" %>
+    <%= f.submit "Track your waterings" %>
+<% end %>
+
+<% %>
