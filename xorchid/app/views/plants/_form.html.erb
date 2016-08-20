@@ -2,6 +2,7 @@
   <ul>
     <% @plant.errors.full_messages.each do |error| %>
     <li><%= error %></li>
+    <% end %>
   </ul>
 <% end %>
 
@@ -10,5 +11,3 @@
     <%= f.text_field :birthday, placeholder: "Date of potting" %>
     <%= f.submit "Track your waterings" %>
 <% end %>
-
-<% %>

@@ -1,6 +1,6 @@
 class WateringsController < ApplicationController
 
-  before_action :set_plant, only: [:show, :edit, :destroy]
+  # before_action :set_plant, only: [:show, :edit, :destroy]
 
   def index
     @plant = Plant.find_by(id: params[:plant_id])
@@ -41,9 +41,11 @@ class WateringsController < ApplicationController
 
   private
 
+  def set_plant
+  end
+
   def watering_params
     params.require(:watering).permit(:water_date)
-
   end
 
 end
